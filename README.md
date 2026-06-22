@@ -1,256 +1,438 @@
-Airbnb Data Analysis & Visualization Project – Detailed Description
-Project Overview
-
-This project focuses on analyzing Airbnb listing data and building an interactive dashboard to understand pricing trends, room availability, neighbourhood performance, and customer preferences. The analysis was performed using Python (Pandas) for data processing and Power BI for interactive visualizations.
-
-The dashboard provides insights into Airbnb properties based on room types, neighbourhoods, pricing, reviews, and geographical distribution. It helps identify high-performing listings, expensive neighbourhoods, and market patterns useful for business intelligence and decision-making.
-
-Dataset Description
-
-The dataset contains Airbnb listing information with important attributes such as:
-
-Column Name	Description
-id	Unique listing identifier
-host_id	Unique host identifier
-host_name	Name of the host
-name	Listing/property title
-neighbourhood	Area or locality of the property
-latitude	Geographic latitude
-longitude	Geographic longitude
-room_type	Type of room offered
-price	Price per night
+# 🏠 Airbnb Data Analysis & Visualization Project
 
-The dataset includes different room categories such as:
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-Data%20Analysis-blue?logo=python" />
+  <img src="https://img.shields.io/badge/Pandas-Data%20Cleaning-150458?logo=pandas" />
+  <img src="https://img.shields.io/badge/Power%20BI-Dashboard-F2C811?logo=powerbi" />
+  <img src="https://img.shields.io/badge/NumPy-Analytics-013243?logo=numpy" />
+  <img src="https://img.shields.io/badge/Matplotlib-Visualization-orange" />
+</p>
 
-Entire home/apartment
-Private room
-Hotel room
-Shared room
-Technologies Used
-Python Libraries
-Pandas
-NumPy
-Matplotlib
-Jupyter Notebook
-Visualization Tool
-Power BI
-Data Cleaning & Preparation
+## 📌 Project Overview
 
-Several preprocessing steps were performed before visualization:
+This project focuses on analyzing Airbnb listing data and building an interactive Power BI dashboard to uncover insights related to pricing trends, room availability, neighbourhood performance, customer preferences, and geographic distribution.
 
-Removed missing/null values
-Standardized column names
-Sorted listings by price
-Filtered premium listings
-Grouped data by neighbourhood and room type
-Created calculated columns using Pandas groupby() and transform()
+The analysis combines **Python-based data processing** with **Power BI visualizations** to help identify:
 
-Example operations included:
+* High-performing listings
+* Premium neighbourhoods
+* Revenue-generating room types
+* Customer booking patterns
+* Geographic concentration of properties
 
-Maximum price by neighbourhood
-Average price by room type
-Total review counts
-Room type distribution
-Price segmentation into luxurious and non-luxurious categories
-Python Data Analysis Performed
-1. Neighbourhood Price Analysis
+The project demonstrates practical skills in:
 
-The project analyzed which neighbourhoods contain the most expensive listings.
+* Data Cleaning
+* Exploratory Data Analysis (EDA)
+* Data Visualization
+* Business Intelligence Reporting
+* Dashboard Development
 
-Key Insight
-Neighbourhood 28806 contained several high-priced luxury Airbnb properties.
-Listings with hot tubs, saunas, mountain views, and premium amenities had significantly higher prices.
-2. Room Type Distribution
+---
 
-The dataset was grouped by room_type to identify market dominance.
+# 📂 Dataset Description
 
-Findings
-Entire home/apartment listings dominated the market.
-Private rooms were the second-largest category.
-Shared rooms and hotel rooms represented a very small portion of listings.
-3. Price Analysis
+The dataset contains Airbnb listing information including:
 
-Average and total prices were calculated for each room type.
+| Column Name   | Description                     |
+| ------------- | ------------------------------- |
+| id            | Unique listing identifier       |
+| host_id       | Unique host identifier          |
+| host_name     | Name of the host                |
+| name          | Listing/property title          |
+| neighbourhood | Property location/neighbourhood |
+| latitude      | Geographic latitude             |
+| longitude     | Geographic longitude            |
+| room_type     | Type of accommodation           |
+| price         | Price per night                 |
 
-Observations
-Hotel rooms had the highest average price.
-Shared rooms were the cheapest accommodation type.
-Entire homes generated the largest total revenue contribution.
-4. Review Analysis
+### 🏡 Room Types Included
 
-The project analyzed review counts to identify highly engaging listings.
+* Entire Home/Apartment
+* Private Room
+* Hotel Room
+* Shared Room
 
-Findings
-Downtown and luxury cabin properties received the highest review counts.
-Popular listings were generally located near tourist areas and city centers.
-5. Geographic Analysis
+---
 
-Latitude and longitude coordinates were used to map Airbnb properties geographically.
+# 🛠️ Technologies Used
 
-Outcome
-Most properties were concentrated around Asheville city regions.
-Clustering showed high-density Airbnb zones.
-Power BI Dashboard Description
+## Python Libraries
 
-The Power BI dashboard provides interactive visual analytics using charts, KPI cards, slicers, maps, and graphs.
+* 🐍 Pandas
+* 🔢 NumPy
+* 📊 Matplotlib
+* 📓 Jupyter Notebook
 
-Dashboard Components
-KPI Cards
+## Visualization Tool
 
-The top section contains summary metrics including:
+* 📈 Power BI
 
-Total Listings
-Total Hosts
-Maximum Minimum Nights
-Average Minimum Nights
-Count of Room Types
+---
 
-These KPIs provide a quick overview of the Airbnb market.
+# 🧹 Data Cleaning & Preparation
 
-Visualizations Included
-1. Sum of Reviews by Listing Name
-Visualization Type
+Before visualization, several preprocessing steps were performed:
 
-Horizontal Bar Chart
+✅ Removed missing/null values
 
-Purpose
+✅ Standardized column names
 
-Shows listings with the highest review counts.
+✅ Sorted listings by price
 
-Insight
+✅ Filtered premium listings
 
-Highly reviewed properties indicate customer popularity and strong engagement.
+✅ Grouped data by neighbourhood and room type
 
-2. Sum of Price by Comfort Type
-Visualization Type
+✅ Created calculated columns using:
 
-Area/Line Chart
+```python
+groupby()
+transform()
+```
 
-Categories
-Luxurious
-Non-luxurious
-Insight
+### Key Transformations
 
-Non-luxurious properties generated a larger total price contribution because of higher listing volume.
+* Maximum price by neighbourhood
+* Average price by room type
+* Total review counts
+* Room type distribution
+* Luxury vs Non-Luxury categorization
 
-3. Room Type Count by Nights Defined
-Visualization Type
+---
 
-Stacked Column Chart
+# 📊 Python Data Analysis
 
-Purpose
+## 1️⃣ Neighbourhood Price Analysis
 
-Compares room type frequencies based on stay duration categories.
+### Objective
 
-Insight
+Identify neighbourhoods containing the most expensive Airbnb listings.
 
-Most bookings were concentrated in the 1–2 night category.
+### Key Insights
 
-4. Geographic Property Mapping
-Visualization Type
+* Neighbourhood **28806** contained several premium listings.
+* Luxury properties featured:
 
-Map Visualization
+  * Hot Tubs
+  * Saunas
+  * Mountain Views
+  * Premium Amenities
 
-Purpose
+### Outcome
 
-Displays Airbnb listing locations using latitude and longitude.
+Properties with luxury amenities commanded significantly higher prices.
 
-Insight
+---
 
-Properties were densely clustered in popular neighbourhoods.
+## 2️⃣ Room Type Distribution
 
-5. Average Price by Room Type
-Visualization Type
+### Objective
 
-Bar Chart
+Determine market dominance among room categories.
 
-Insight
-Hotel rooms had the highest average prices.
-Shared rooms had the lowest average prices.
-6. Sum of Price by Neighbourhood
-Visualization Type
+### Findings
 
-Line Chart
+🥇 Entire Home/Apartment
 
-Purpose
+🥈 Private Room
 
-Compares neighbourhood revenue contribution.
+🥉 Hotel Room
 
-Insight
+🏅 Shared Room
 
-Certain neighbourhoods generated significantly higher total revenue.
+### Insight
 
-7. Room Type Distribution
-Visualization Type
+Entire homes dominate the Airbnb market and represent the majority of listings.
 
-Pie Chart
+---
 
-Insight
+## 3️⃣ Price Analysis
 
-Entire home/apartment listings accounted for nearly 90% of the total listings.
+### Objective
 
-Advanced Analysis Features
-Luxury Property Detection
+Analyze pricing behavior across room types.
 
-Listings were categorized into:
+### Findings
 
-Luxurious
-Non-luxurious
+| Room Type   | Observation                        |
+| ----------- | ---------------------------------- |
+| Hotel Room  | Highest average price              |
+| Shared Room | Lowest average price               |
+| Entire Home | Highest total revenue contribution |
 
-based on pricing and amenities.
+---
 
-This segmentation helped analyze:
+## 4️⃣ Review Analysis
 
-Premium market trends
-Revenue contribution
-Customer demand patterns
-Business Insights Generated
-Key Findings
-Market Dominance
+### Objective
 
-Entire homes dominate Airbnb inventory and revenue generation.
+Identify highly engaging listings through customer reviews.
 
-Premium Listings
+### Findings
 
-Luxury properties with amenities like:
+* Downtown properties received the highest review counts.
+* Luxury cabins attracted significant customer engagement.
+* Tourist-centric locations generally had more reviews.
 
-Hot tubs
-Saunas
-Mountain views
-Game rooms
+---
 
-were priced significantly higher.
+## 5️⃣ Geographic Analysis
 
-Geographic Trends
+### Objective
 
-Listings were concentrated in highly populated tourist regions.
+Visualize Airbnb listings geographically.
 
-Customer Preferences
+### Findings
 
-Short stays (1–2 nights) were the most common booking pattern.
+* Most listings were concentrated around Asheville regions.
+* Several high-density Airbnb clusters were identified.
 
-Revenue Insights
+---
 
-Neighbourhood-specific analysis identified premium revenue zones.
+# 📈 Power BI Dashboard
 
-Use Cases of the Project
+The Power BI dashboard provides interactive visual analytics using:
 
-This project can be useful for:
+* KPI Cards
+* Maps
+* Charts
+* Graphs
+* Slicers
+* Filters
 
-Airbnb market analysis
-Pricing strategy optimization
-Tourism trend analysis
-Real estate investment decisions
-Customer behavior analysis
-Business intelligence reporting
-Conclusion
+---
 
-The Airbnb Data Analysis project successfully combines Python-based data processing with Power BI interactive visualization to uncover meaningful insights from Airbnb listings. The project demonstrates strong skills in:
+## 🎯 Dashboard KPIs
 
-Data cleaning
-Exploratory data analysis
-Data visualization
-Dashboard creation
-Business insight generation
+The dashboard highlights:
 
-The dashboard enables users to easily explore Airbnb pricing patterns, room distribution, customer engagement, and neighbourhood performance through visually interactive reports.
+* Total Listings
+* Total Hosts
+* Maximum Minimum Nights
+* Average Minimum Nights
+* Count of Room Types
+
+These metrics provide an overall snapshot of the Airbnb market.
+
+---
+
+# 📊 Dashboard Visualizations
+
+## 1. Sum of Reviews by Listing Name
+
+### Visualization Type
+
+📊 Horizontal Bar Chart
+
+### Insight
+
+Listings with higher review counts indicate strong customer engagement and popularity.
+
+---
+
+## 2. Sum of Price by Comfort Type
+
+### Visualization Type
+
+📈 Area / Line Chart
+
+### Categories
+
+* Luxurious
+* Non-Luxurious
+
+### Insight
+
+Non-luxurious properties contributed higher overall revenue due to greater listing volume.
+
+---
+
+## 3. Room Type Count by Nights Defined
+
+### Visualization Type
+
+📊 Stacked Column Chart
+
+### Insight
+
+Most bookings were concentrated in the **1–2 night stay category**.
+
+---
+
+## 4. Geographic Property Mapping
+
+### Visualization Type
+
+🗺️ Map Visualization
+
+### Insight
+
+Properties were densely clustered in popular tourist neighbourhoods.
+
+---
+
+## 5. Average Price by Room Type
+
+### Visualization Type
+
+📊 Bar Chart
+
+### Findings
+
+* Hotel Rooms → Highest Average Price
+* Shared Rooms → Lowest Average Price
+
+---
+
+## 6. Sum of Price by Neighbourhood
+
+### Visualization Type
+
+📈 Line Chart
+
+### Insight
+
+Certain neighbourhoods generated substantially higher revenue than others.
+
+---
+
+## 7. Room Type Distribution
+
+### Visualization Type
+
+🥧 Pie Chart
+
+### Insight
+
+Entire Home/Apartment listings accounted for nearly **90% of total listings**.
+
+---
+
+# ⭐ Advanced Analysis Features
+
+## Luxury Property Detection
+
+Listings were segmented into:
+
+* 💎 Luxurious
+* 🏠 Non-Luxurious
+
+based on:
+
+* Price
+* Amenities
+* Property Features
+
+### Benefits
+
+* Premium market identification
+* Revenue analysis
+* Customer demand assessment
+* Pricing strategy evaluation
+
+---
+
+# 💡 Business Insights Generated
+
+## Market Dominance
+
+Entire homes dominate both inventory and revenue generation.
+
+---
+
+## Premium Listings
+
+Luxury properties containing:
+
+* Hot Tubs
+* Saunas
+* Mountain Views
+* Game Rooms
+
+showed significantly higher pricing.
+
+---
+
+## Geographic Trends
+
+Airbnb properties were concentrated in high-tourism regions.
+
+---
+
+## Customer Preferences
+
+Short stays of **1–2 nights** represented the most common booking behavior.
+
+---
+
+## Revenue Insights
+
+Neighbourhood-level analysis identified premium revenue-generating zones.
+
+---
+
+# 🎯 Project Use Cases
+
+This project can be applied to:
+
+* Airbnb Market Analysis
+* Pricing Strategy Optimization
+* Tourism Trend Analysis
+* Real Estate Investment Decisions
+* Customer Behavior Analysis
+* Business Intelligence Reporting
+
+---
+
+# 🚀 Skills Demonstrated
+
+### Data Analytics
+
+* Data Cleaning
+* Data Transformation
+* Exploratory Data Analysis
+
+### Python
+
+* Pandas
+* NumPy
+* Matplotlib
+
+### Power BI
+
+* Dashboard Design
+* DAX Measures
+* KPI Reporting
+* Interactive Visualizations
+
+### Business Intelligence
+
+* Revenue Analysis
+* Customer Insights
+* Market Segmentation
+* Geographic Analytics
+
+---
+
+# 📌 Conclusion
+
+The Airbnb Data Analysis Project successfully combines **Python-based data processing** and **Power BI dashboard development** to uncover meaningful business insights from Airbnb listing data.
+
+The project demonstrates end-to-end analytical capabilities, from raw data preparation to interactive dashboard creation, enabling users to explore:
+
+* Pricing Patterns
+* Room Type Distribution
+* Customer Engagement
+* Neighbourhood Performance
+* Geographic Trends
+
+through a visually interactive and business-focused reporting solution.
+
+---
+
+## 👨‍💻 Author
+
+**Nehal Gudage**
+
+Aspiring Data Analyst | Python | SQL | Power BI | Data Visualization
